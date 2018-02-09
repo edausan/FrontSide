@@ -1,2 +1,0 @@
-# frontside.com
-My Portfolio
