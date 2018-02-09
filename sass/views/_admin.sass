@@ -1,0 +1,223 @@
+section.login-wrapper
+    position: relative
+    display: block
+    overflow: hidden
+    width: 100vw
+    height: 100vh
+    background: $themeGradient
+
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: url('../images/admin3.jpg') no-repeat
+        background-size: cover
+        background-position: bottom
+        z-index: 1000
+        animation: changeBg2 20s ease infinite forwards
+
+
+    article.form-wrapper
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 500px
+        height: auto
+        +transform
+        z-index: 1001
+        background: rgba(white, .2)
+        border: 1px solid rgba(white, .3)
+        box-shadow: 0 8px 32px rgba(black, .5)
+        padding: 50px
+        overflow: hidden
+
+        &::before
+            content: ''
+            position: absolute
+            top: 50%
+            left: 50%
+            width: 100vw
+            height: 100vh
+            +transform
+            background-size: cover 
+            background-position: 50%
+            z-index: 1000
+            filter: grayscale(100%) blur(10px)
+            animation: changeBg2 20s ease infinite forwards
+            z-index: 1000
+
+        figure.logo-wrapper
+            width: 20%
+            margin: 0 auto 30px
+            position: relative
+            z-index: 1001
+            display: block
+
+            img 
+                width: 100%
+
+        p.notification
+            display: block 
+            position: relative
+            padding: 5px 10px
+            text-align: center
+            color: lighten($red, 30%)
+            background: $red
+            z-index: 1001
+            margin: 0 30px 20px
+            box-shadow: 0 8px 32px rgba(black, .2)
+            
+
+        form.login-form
+            padding: 0px 30px
+            z-index: 1001
+            position: relative
+
+            .field-wrapper
+                padding: 8px 20px
+                background: rgba(white, .4)
+                border: 1px solid rgba(white, .1)
+                box-shadow: 0 4px 10px rgba(black, 0)
+                +transition
+                position: relative
+                +clear
+
+                &.focus
+                    border-color: white
+                    box-shadow: 0 8px 10px rgba(black, .2)
+                
+                &:nth-child(1)
+                    margin-bottom: 20px
+                span 
+                    border-right: 1px solid white
+                    color: white 
+                    padding-right: 10px
+                    display: inline-block
+                    width: 7%
+                    float: left
+                    i 
+
+                input.form-field
+                    width: 90%
+                    float: right
+                    background: transparent 
+                    border-style: none 
+                    color: white 
+
+                    &:invalid
+                        outline: none
+                        box-shadow: none
+
+
+
+            button.submit-btn
+                border-style: none
+                padding: 10px 20px
+                display: block
+                width: 100%
+                color: $footerWhite 
+                background: lighten(black, 10%)
+                text-transform: uppercase
+                margin-top: 20px
+                cursor: pointer
+                +transition
+
+                &:hover
+                    background: lighten(black, 0%)
+                    
+    p.copyright
+        position: absolute
+        bottom: 20%
+        left: 50%
+        +transform(translate(-50%, -50%))
+        z-index: 1001
+        color: white 
+        font-size: 12px
+        width: 100%
+        text-align: center
+
+
+@keyframes changeBg
+    0%
+        background: url('../images/admin.jpg')
+        background-size: cover 
+        opacity: 0
+    15% 
+        background: url('../images/admin.jpg')
+        background-size: cover 
+        opacity: .4
+
+    30%
+        background: url('../images/admin.jpg')
+        background-size: cover 
+        opacity: 0
+    30.2%
+        background: url('../images/admin2.jpg')
+        background-size: cover 
+        opacity: 0
+
+    45%
+        background: url('../images/admin2.jpg')
+        background-size: cover 
+        opacity: .4 
+    60%
+        background: url('../images/admin2.jpg')
+        background-size: cover 
+        opacity: 0
+    60.2%
+        background: url('../images/admin3.jpg')
+        background-size: cover 
+        opacity: 0
+    80%
+        background: url('../images/admin3.jpg')
+        background-size: cover 
+        opacity: .4
+    100%
+        background: url('../images/admin3.jpg')
+        background-size: cover 
+        opacity: 0
+
+
+
+@keyframes changeBg2
+    0%
+        background: url('../images/admin.jpg')
+        background-size: cover 
+        opacity: 0
+    15% 
+        background: url('../images/admin.jpg')
+        background-size: cover 
+        opacity: .7
+
+    30%
+        background: url('../images/admin.jpg')
+        background-size: cover 
+        opacity: 0
+    30.2%
+        background: url('../images/admin2.jpg')
+        background-size: cover 
+        opacity: 0
+
+    45%
+        background: url('../images/admin2.jpg')
+        background-size: cover 
+        opacity: .7 
+    60%
+        background: url('../images/admin2.jpg')
+        background-size: cover 
+        opacity: 0
+    60.2%
+        background: url('../images/admin3.jpg')
+        background-size: cover 
+        opacity: 0
+    80%
+        background: url('../images/admin3.jpg')
+        background-size: cover 
+        opacity: .7
+    100%
+        background: url('../images/admin3.jpg')
+        background-size: cover 
+        opacity: 0

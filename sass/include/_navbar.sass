@@ -1,0 +1,32 @@
+nav.fs-nav
+    width: 0%
+    position: fixed 
+    height: 100%
+    background: white
+    top: 0
+    right: 0 !important
+    z-index: 1000
+    +transition(350ms ease)
+    overflow: hidden
+
+    &.open-nav
+        width: 20%
+
+    ul.fs-navlist
+        list-style: none 
+        padding: 0
+        text-align: center
+        +transition(1s ease)
+        +transform(translateX(50%)) 
+        opacity: 0
+
+        &.fs-nav-translate
+            +transform(translateX(0%)) 
+            opacity: 1
+
+        li.fs-item
+            a 
+                text-decoration: none
+                padding: 30px
+                color: black
+                display: block

@@ -1,0 +1,77 @@
+section.services-pop-wrapper
+    width: 100%
+    height: 100%
+    background: rgba(white, .7)
+    position: fixed
+    z-index: 1005
+
+    &::before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 45%
+        width: 100px
+        height: 200%
+        background: $logoOrange
+        z-index: 1000
+        +transform(translate(-50%, -50%) rotate(45deg))
+        opacity: .5
+        border-right: 50px solid $logoOrange
+
+    article.service-pop-main
+        position: absolute
+        top: 50%
+        left: 50%
+        +transform
+        width: 600px
+        height: 600px
+        background: linear-gradient(to bottom right, #656F7D 0%, #39424F 100%)
+        box-shadow: 0 8px 15px -4px rgba(black, .8)
+        z-index: 1001
+
+        
+
+        h1 
+            font-family: 'Lato-bi'
+            color: #5B6472
+            margin: 0
+            font-size: 80px
+            text-transform: uppercase
+            line-height: 60px
+
+
+        .service-pop-sub
+            position: absolute
+            top: 20%
+            left: 30%
+            height: 65%
+            width: 87%
+            background: white 
+            box-shadow: 0 8px 32px rgba(black, .5)
+
+
+            button#see-all
+                padding: 20px 40px
+                border-style: none
+                background: $logoOrange
+                color: white
+                font-family: 
+                position: absolute
+                bottom: 0
+                right: 30px
+                font-size: 12px
+                text-transform: uppercase
+                +transform(translateY(50%) scale(1))
+                box-shadow: 0 8px 32px 0px rgba($logoOrange, .6)
+                +transition
+                cursor: pointer
+
+                &:link
+                    outline: none
+                &:focus
+                    outline: none
+
+
+                &:hover
+                    +transform(translateY(50%) scale(1.050))
+                    box-shadow: 0 8px 20px -8px rgba($logoOrange, .6)

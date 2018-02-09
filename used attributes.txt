@@ -1,0 +1,31 @@
+@admin_fs.php
+    #classes
+        login-wrapper
+        logo-wrapper 
+        login-form
+        field-wrapper 
+        form-field
+        submit-btn
+
+    #id
+        username-field 
+        username 
+        password-field 
+        password 
+        sign-in-btn
+
+    #name 
+        username 
+        password 
+
+@upload-img.php 
+    #classes 
+        form        -   fs-form
+        figure      -   upload-img-wrapper
+        img         -   upimg
+        fieldset    -   field-wrapper
+        input       -   
+        textarea    -   
+
+
+    

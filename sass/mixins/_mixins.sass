@@ -1,0 +1,249 @@
+// ---------------------
+// ---- Sass Mixins ----
+// ---------------------
+
+// ---- Transform ------
+=transform($val:  translate(-50%, -50%))
+    -webkit-transform: $val
+    -moz-transform: $val
+    -o-transform: $val
+    transform: $val
+
+// ---- Transition ------
+=transition($val: 250ms ease)
+    -webkit-transition: $val
+    -moz-transition: $val
+    -o-transition: $val
+    transition: $val
+
+// ---- Boder Radius ------
+=border-radius($val: 5px)
+    -webkit-border-radius: $val
+    -moz-border-radius: $val
+    -o-border-radius: $val
+    border-radius: $val
+
+
+
+
+
+
+
+// -------------------------
+// ----- Font families -----
+// -------------------------
+@font-face 
+    font-family: 'Quicksand'
+    src: url(../fonts/Quicksand-Regular.ttf)
+
+@font-face 
+    font-family: 'Rubik'
+    src: url(../fonts/RubikMonoOne-Regular.ttf)
+
+@font-face 
+    font-family: 'Lato-bi'
+    src: url(../fonts/Lato-BlackItalic.ttf)
+
+
+
+
+
+
+// --------------------------
+// ----- Default Styles -----
+// --------------------------
+body, html
+    padding: 0 !important
+    margin: 0 !important
+    font-family: 'Quicksand'
+    background: black
+
+
+
+=clear()
+    &::after
+        content: ''
+        display: table
+        clear: both
+
+.clear
+    +clear()
+
+
+a
+    text-decoration: none
+    
+
+ul
+    list-style: none
+    padding: 0
+    margin: 0
+
+// Form element (form)
+.fs-form
+    width: 50%
+    margin: 70px auto 100px
+    position: relative
+    +clear
+
+// input elements   (input, select, textarea)
+.fs-input
+    padding: 10px
+    +border-radius 
+    display: block 
+    width: 100%
+    border-style: none 
+    border: 1px solid $logoPurple
+    margin: 10px auto
+    +transition
+
+    &:focus
+        border-color: $logoOrange
+
+    &:invalid
+        outline: none
+        box-shadow: none
+
+.fleft
+    float: left
+
+.fright
+    float: right
+    
+// Button   (input, button)
+.fs-btn
+    padding: 10px
+    +border-radius 
+    display: block 
+    width: 100%
+    border-style: none 
+    border: 1px solid $logoPurple
+    margin: 10px auto
+
+// Navbar at the top (nav)
+.fs-nav-top
+    width: 100%
+    position: relative
+    +clear
+
+// Logo Wrapper (figure)
+.fs-nav-logo
+    width: 5%
+    position: relative
+    margin: 0px
+
+    img
+        width: 100%
+
+
+.fs-container
+    width: 1170px
+    max-width: 1320px
+    padding-left: 15px
+    padding-right: 15px
+    margin: 0 auto
+    +clear
+
+.fs-container-fluid
+    overflow: hidden
+    min-height: 100vh
+    padding-left: 15px
+    padding-right: 15px
+    background: white
+    position: relative
+    z-index: 1002
+    +transition(350ms ease)
+    +clear
+
+    &.nav-opened
+        width: 80% !important
+        filter: blur(2px) grayscale(100%)
+        opacity: .3
+
+        figure.banner-wrapper
+            &::after 
+                background-attachment: initial
+
+.fs-row
+    margin-left: -15px
+    margin-right: -15px
+    +clear
+
+
+.fs-fixed-top
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+
+.fs-fixed-bottom
+    position: fixed
+    bottom: 0
+    left: 0
+    width: 100%
+
+.fs-abs-bottom
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+
+.fs-abs-top
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+
+
+.bottom-fade
+    &::before
+        content: ''
+        position: absolute
+        bottom: 0 
+        left: 0 
+        height: 50%
+        width: 100%
+        background: linear-gradient(to top, rgba(black, 1) 0%, transparent 100%) 
+        opacity: .7
+
+
+.white-fade
+    &::before
+        content: ''
+        position: absolute
+        bottom: 0 
+        left: 0 
+        height: 100%
+        width: 100%
+        background: white
+        opacity: .3
+        z-index: 1001
+
+.white-fade-gradient
+    &::before
+        content: ''
+        position: absolute
+        bottom: 0 
+        left: 0 
+        height: 100%
+        width: 100%
+        background: linear-gradient(to top, white 0%, rgba(white, .5) 50%, transparent 100%)
+        opacity: 1
+        z-index: 1000
+
+.black-fade
+    &::before
+        content: ''
+        position: absolute
+        bottom: 0 
+        left: 0 
+        height: 100%
+        width: 100%
+        background: black
+        opacity: .8
+        z-index: 1001
+
+
+.long
+    height: 200vh
+    width: 10px

@@ -1,0 +1,81 @@
+.contact-page
+
+    label.email-notif
+        display: block
+        width: 50%
+        padding: 10px
+        border: 1px solid $designer
+        +border-radius
+        margin: 0 auto
+        text-align: center
+        margin-top: 30px
+
+    label#success 
+        color: $designer
+
+    label#failed 
+        color: $orange
+        border-color: $orange
+
+
+form.fs-form
+
+    .form-text
+        padding: 10px
+        +border-radius 
+        display: block 
+        width: 50%
+        border-style: none 
+        border: 1px solid $logoPurple
+        margin: 10px auto
+        +transition
+
+        &:focus
+            border-color: $logoOrange
+
+        &:invalid
+            outline: none
+            box-shadow: none
+
+
+
+    textarea
+        // @extend .form-text
+
+    button 
+        // background: $footerGrey
+        // padding: 10px
+        // +border-radius 
+        // color: white
+        // border-style: none
+        // width: 50%
+        // margin: 0 auto
+        // display: block
+        // +transition
+        // position: relative
+        // overflow: hidden
+        // cursor: pointer
+
+        // span
+        //     position: relative
+        //     z-index: 1001
+
+        // &::before
+        //     content: ''
+        //     position: absolute
+        //     top: 0
+        //     left: 0
+        //     width: 0%
+        //     height: 100%
+        //     background: linear-gradient(to right, #e8400b, #581a80)
+        //     +transition(350ms ease)
+        //     opacity: 0
+        //     z-index: 1000
+
+
+        &:hover
+            &::before
+                width: 100%
+                opacity: 1
+
+        
