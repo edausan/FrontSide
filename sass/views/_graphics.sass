@@ -1,0 +1,42 @@
+ul.graphics-wrapper
+    width: 100%
+    +clear
+    li 
+        width: 25%
+        float: left
+        padding: 10px
+        
+
+        &:hover
+            .thumbnail-wrapper
+                box-shadow: 0 8px 15px rgba(black, .5)
+                border-color: $logoPurple
+
+        .thumbnail-wrapper
+            overflow: hidden
+            width: 100%
+            box-shadow: 0 2px 2px rgba(black, .1)
+            cursor: pointer
+            border: 1px solid #eeeeee
+            +transition
+            
+
+            figure.thumbnail-container
+                width: 100%
+                background: white
+                margin: 0
+                height: 220px
+                
+                img.thumbnail 
+                    height: 100%
+                    width: auto 
+                    display: block
+                    margin: 0 auto 
+                    
+
+            .caption
+                display: block 
+                text-align: center
+                // background: #1a1a1a
+                color: #1a1a1a
+                padding: 20px

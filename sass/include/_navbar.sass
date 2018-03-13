@@ -1,32 +1,104 @@
 nav.fs-nav
     width: 0%
     position: fixed 
-    height: 100%
-    background: white
     top: 0
-    right: 0 !important
-    z-index: 1000
+    left: 0
+    width: 100%
+    height: auto
+    background: transparent
+    z-index: 2000
     +transition(350ms ease)
-    overflow: hidden
 
-    &.open-nav
-        width: 20%
+    &.fixed
+        figure.navbar-logo
+            // left: 30px
+
+        ul.fs-navlist
+            background: white
+            box-shadow: 0 8px 32px rgba(black, .3)
+
+            li.fs-item
+                padding: 15px !important
+                a.nav-link                    
+                    color: black
+
+                    &:hover
+                        color: $logoOrange
+
+
+    figure.navbar-logo
+        position: absolute
+        top: 50%
+        left: 20px
+        +transform(translateY(-50%))
+        height: 50px
+        z-index: 1002
+        +transition(300ms ease)
+        img 
+            height: 100%
 
     ul.fs-navlist
         list-style: none 
         padding: 0
         text-align: center
-        +transition(1s ease)
-        +transform(translateX(50%)) 
-        opacity: 0
+        box-shadow: 0 4px 20px rgba(black, 0)
+        +transition(300ms ease)
+        opacity: 1
+        position: relative
+        z-index: 1001
 
         &.fs-nav-translate
             +transform(translateX(0%)) 
             opacity: 1
 
         li.fs-item
+            display: inline-block
+            padding: 25px
+            +transition
+            position: relative
+
+            &::before
+                content: ''
+                position: absolute
+                bottom: 0
+                left: 0
+                width: 0%
+                height: 3px 
+                background: $themeGradient
+                opacity: 0
+                +transition(350ms ease)
+
             a 
                 text-decoration: none
-                padding: 30px
-                color: black
+                color: white
                 display: block
+                +transition
+
+            &:hover
+                .sub-nav
+                    +transform(translateX(0px))
+                    opacity: 1
+
+                &::before
+                    opacity: 1
+                    width: 100%
+
+
+            .sub-nav
+                display: none
+                position: absolute
+                bottom: -88px
+                left: 0
+                width: 300%
+                background: #eeeeee 
+                box-sizing: border-box
+                padding: 20px
+                +transition
+                +transform(translateX(-30px))
+                opacity: 0
+
+                ul 
+                    li 
+                        a 
+                            color: black
+

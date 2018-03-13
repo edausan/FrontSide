@@ -23,10 +23,4 @@
     include('include/navbar.php'); 
 ?>
 <section class="fs-container-fluid">
-    <button id="nav-btn-trig" type="button"><i class="fa fa-bars"></i></button>
     <article class="fs-row">
-
-        <section class="header clear">
-            <!-- <?php include('include/logo.php'); ?> -->
-            <!-- <?php include('include/navbar.php'); ?> -->
-        </section>

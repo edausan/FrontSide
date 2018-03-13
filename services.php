@@ -10,6 +10,4 @@
     include('include/banner.php');
 ?>
 
-<?php 
-    include('footer.php');
-?>
+<?php include('footer.php'); ?>

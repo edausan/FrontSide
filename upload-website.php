@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    define('TITLE', 'Dashboard');
+    define('TITLE', 'Upload Website');
     $bodyClass = 'dashboard-page';
     include('dashboard-header.php');
 
@@ -18,8 +18,7 @@
 
         <?php include('include/dashboard-nav.php'); ?>
         
-        <a href="upload-graphics">Upload Graphics</a>
-        <a href="upload-website">Upload Website</a>
+        <?php include('include/upload-web.php'); ?>
         
     </article>
 </section>

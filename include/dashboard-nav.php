@@ -3,7 +3,7 @@
     <div class="fs-logo-wrapper fleft">
 
         <figure class="fs-nav-logo fleft">
-            <a href="home">
+            <a href="dashboard">
                 <img src="images/fslogo2.png" alt="">
             </a>
         </figure>

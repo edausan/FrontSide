@@ -1,9 +1,7 @@
 <?php
 
     if (isset($_POST['submit'])) {
-
-        $title  =   $_POST['title'];
-        $description  =   $_POST['description'];
+        $table = $_POST['table'];
 
         $target_dir = "images/graphics/";
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -28,19 +26,40 @@
                 $imgName    =   basename( $_FILES["fileToUpload"]["name"]);
 
                 include('db/db-connect.php');
-            
-                $sql = "INSERT INTO fs_graphics (title, description, filename, path)
-                VALUES ('$title', '$description', '$imgName', '$target_file')";
-            
-                if ($mysqli->query($sql) === TRUE) {
-                    $newURL = 'dashboard.php';
-                    header('location:' .$newURL);
-                    echo "New record created successfully";
-                } else {
-                    echo "Error: " . $sql . "<br>" . $conn->error;
-                }
 
+                if ($table == 'fs_graphics') {
+                    $title  =   $_POST['title'];
+                    $description  =   $_POST['description'];
+
+                    $sql = "INSERT INTO $table (title, description, filename, path)
+                    VALUES ('$title', '$description', '$imgName', '$target_file')";
                 
+                    if ($mysqli->query($sql) === TRUE) {
+                        $newURL = 'dashboard.php';
+                        header('location:' .$newURL);
+                        echo "New record created successfully";
+                    } else {
+                        echo "Error: " . $sql . "<br>" . $conn->error;
+                    }
+
+                } else {
+
+                    $web_name = $_POST['website-name'];
+                    $web_url = $_POST['website-url'];
+                    $web_thumbname = $imgName;
+                    $web_thumbnail = $target_file;
+
+                    $sql = "INSERT INTO $table (web_name, web_url, web_thumbname, web_thumbnail)
+                    VALUES ('$web_name', '$web_url', '$web_thumbname', '$web_thumbnail')";
+                
+                    if ($mysqli->query($sql) === TRUE) {
+                        $newURL = 'dashboard.php';
+                        header('location:' .$newURL);
+                        echo "New record created successfully";
+                    } else {
+                        echo "Error: " . $sql . "<br>" . $conn->error;
+                    }
+                }
             
                 $mysqli->close();
             } else {

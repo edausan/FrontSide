@@ -68,7 +68,6 @@
                                     } else {
                                         echo '<p class="notification">Wrong Credentials</p>';
                                     }
-
                                 }
                                 
                             } else {
