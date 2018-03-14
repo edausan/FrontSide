@@ -259,6 +259,9 @@ footer.fs-footer {
     width: 35%;
     border-top: 1px solid #333333; }
 
+section.featured-graphics-wrapper {
+  padding: 40px 0px; }
+
 section.services-overview {
   padding: 100px 0px; }
   section.services-overview ul {
@@ -434,10 +437,16 @@ figure.banner-wrapper {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); }
   figure.banner-wrapper .banner-title {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: 0px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
     z-index: 1002;
-    color: white; }
+    color: white;
+    text-shadow: 0 4px 5px rgba(0, 0, 0, 0.4); }
   figure.banner-wrapper::before {
     content: '';
     position: absolute;
@@ -454,17 +463,17 @@ figure.banner-wrapper {
   figure.banner-wrapper.banner-1::after {
     background: url("../images/home.jpg") no-repeat; }
   figure.banner-wrapper.banner-2 {
-    height: 35vh; }
+    height: 20vh; }
     figure.banner-wrapper.banner-2::after {
       background: url("../images/graphics.jpg") no-repeat; }
   figure.banner-wrapper.banner-3 {
-    height: 35vh; }
+    height: 20vh; }
     figure.banner-wrapper.banner-3::after {
       background: url("../images/portfolio.jpg") no-repeat;
       -webkit-filter: grayscale(100%);
       filter: grayscale(100%); }
   figure.banner-wrapper.banner-4 {
-    height: 35vh; }
+    height: 20vh; }
     figure.banner-wrapper.banner-4::after {
       background: url("../images/contact.jpg") no-repeat;
       -webkit-filter: grayscale(100%);
@@ -478,7 +487,7 @@ figure.banner-wrapper {
     height: 100%;
     background-size: cover;
     background-attachment: fixed;
-    background-position: 0 -300px;
+    background-position: 0 -370px;
     z-index: 1000; }
   figure.banner-wrapper figure.logo-wrapper {
     position: absolute;
@@ -756,6 +765,14 @@ nav.fs-nav-top {
             margin: 0; }
 
 /* ##### VIEWS ##### */
+.home-page .home-title {
+  margin: 0;
+  padding: 0 20px;
+  margin: 20px 0; }
+
+.home-page ul.graphics-wrapper {
+  padding: 0 20px !important; }
+
 .contact-page label.email-notif {
   display: block;
   width: 50%;
@@ -1244,9 +1261,9 @@ ul.graphics-wrapper {
     float: left;
     padding: 10px; }
     ul.graphics-wrapper li:hover .thumbnail-wrapper {
-      -webkit-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
-      border-color: #581a80; }
+      -webkit-box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      border-color: #eeeeee; }
     ul.graphics-wrapper li .thumbnail-wrapper {
       overflow: hidden;
       width: 100%;
@@ -1271,5 +1288,41 @@ ul.graphics-wrapper {
       ul.graphics-wrapper li .thumbnail-wrapper .caption {
         display: block;
         text-align: center;
+        min-height: 88px;
         color: #1a1a1a;
         padding: 20px; }
+
+section.webdev-wrapper {
+  padding: 50px 0px; }
+  section.webdev-wrapper ul li a {
+    color: #333333;
+    text-decoration: none;
+    display: block;
+    background: white;
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    border: 1px solid transparent;
+    -webkit-transition: 250ms ease;
+    -moz-transition: 250ms ease;
+    -o-transition: 250ms ease;
+    transition: 250ms ease; }
+    section.webdev-wrapper ul li a:hover {
+      -webkit-box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      border-color: #eeeeee;
+      color: black; }
+      section.webdev-wrapper ul li a:hover img {
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%); }
+    section.webdev-wrapper ul li a figure {
+      margin: 0; }
+      section.webdev-wrapper ul li a figure img {
+        -webkit-filter: grayscale(35%);
+        filter: grayscale(35%);
+        -webkit-transition: 250ms ease;
+        -moz-transition: 250ms ease;
+        -o-transition: 250ms ease;
+        transition: 250ms ease; }
+      section.webdev-wrapper ul li a figure .caption {
+        padding: 10px;
+        text-align: center; }

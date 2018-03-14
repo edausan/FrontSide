@@ -1,16 +1,16 @@
 ul.graphics-wrapper
     width: 100%
     +clear
+    
     li 
         width: 25%
         float: left
         padding: 10px
-        
 
         &:hover
             .thumbnail-wrapper
-                box-shadow: 0 8px 15px rgba(black, .5)
-                border-color: $logoPurple
+                box-shadow: 0 8px 32px rgba(black, .2)
+                border-color: #eeeeee
 
         .thumbnail-wrapper
             overflow: hidden
@@ -20,7 +20,6 @@ ul.graphics-wrapper
             border: 1px solid #eeeeee
             +transition
             
-
             figure.thumbnail-container
                 width: 100%
                 background: white
@@ -33,10 +32,9 @@ ul.graphics-wrapper
                     display: block
                     margin: 0 auto 
                     
-
             .caption
                 display: block 
                 text-align: center
-                // background: #1a1a1a
+                min-height: 88px
                 color: #1a1a1a
                 padding: 20px

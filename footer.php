@@ -13,10 +13,12 @@
     </section>
 
     <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.hotkeys.js"></script>
     <script src="scripts/nav.js"></script>
     <script src="scripts/navbar.js"></script>
     <script src="scripts/img-upload.js"></script>
     <script src="scripts/dashboard.js"></script>
+    <!-- <script src="scripts/fetching-graphics.js"></script> -->
     
 </body>
 </html>

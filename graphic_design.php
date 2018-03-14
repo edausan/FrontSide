@@ -6,11 +6,7 @@
     $banner = 'banner-2';
     $title  =  'Graphic Designs';
     include('include/banner_small.php');
-
-    include('db/db-connect.php');
-    $sql = "SELECT * FROM fs_graphics";
-    
-    $result = $mysqli->query($sql);
+    include('db/db-graphics-table.php');
     
         
     if ($result->num_rows > 0) {
@@ -22,10 +18,11 @@
             $results[] = $res;
             rsort($results);
         } ?>
+        
         <section class="fs-container">
             <article class="fs-row">
                 <ul class="graphics-wrapper" style="padding: 100px 20px;">
-
+            
                     <?php foreach ($results as $result) : ?>
                         <li>
                             <div class="thumbnail-wrapper">

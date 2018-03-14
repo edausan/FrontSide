@@ -1,0 +1,33 @@
+section.webdev-wrapper
+    padding: 50px 0px
+
+    ul 
+        li 
+            a 
+                color: #333333
+                text-decoration: none
+                display: block 
+                background: white 
+                box-shadow: 0 2px 2px rgba(black, .1)
+                border: 1px solid transparent
+                +transition
+
+                &:hover
+                    box-shadow: 0 8px 32px rgba(black, .2)
+                    border-color: #eeeeee
+                    color: black
+
+                    img 
+                        filter: grayscale(0%)
+                    
+
+                figure 
+                    margin: 0
+                    img 
+                        filter: grayscale(35%)
+                        +transition
+                    
+                    .caption
+                        padding: 10px
+                        text-align: center
+

@@ -2,7 +2,7 @@
     <figure class="navbar-logo"><a href="home"><img src="images/fslogo2.png" alt=""></a></figure>
     <ul class="fs-navlist">
         <li class="fs-item"><a class="nav-link" href="home">Home</a></li>
-        <li class="fs-item" id="portfolios"><a class="nav-link" href="portfolio">Portfolio</a>
+        <!-- <li class="fs-item" id="portfolios"><a class="nav-link" href="portfolio">Portfolio</a> -->
             <!-- <div class="sub-nav" id="portfolios">
                 <ul>
                     <li><a href="graphic_design">Graphics Design</a></li>

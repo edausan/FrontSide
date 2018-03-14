@@ -9,10 +9,12 @@ figure.banner-wrapper
 
     .banner-title
         position: absolute
-        bottom: 20px
-        left: 20px
+        bottom: 0px
+        left: 50%
+        +transform(translateX(-50%))
         z-index: 1002
         color: white 
+        text-shadow: 0 4px 5px rgba(black, .4)
 
 
     &::before
@@ -31,17 +33,17 @@ figure.banner-wrapper
             background: url('../images/home.jpg') no-repeat
             
     &.banner-2
-        height: 35vh
+        height: 20vh
         &::after
             background: url('../images/graphics.jpg') no-repeat
             // filter: grayscale(100%)
     &.banner-3
-        height: 35vh
+        height: 20vh
         &::after
             background: url('../images/portfolio.jpg') no-repeat
             filter: grayscale(100%)
     &.banner-4
-        height: 35vh
+        height: 20vh
         &::after
             background: url('../images/contact.jpg') no-repeat
             filter: grayscale(100%)
@@ -56,7 +58,7 @@ figure.banner-wrapper
             height: 100%
             background-size: cover
             background-attachment: fixed
-            background-position: 0 -300px
+            background-position: 0 -370px
             z-index: 1000
             
             

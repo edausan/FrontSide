@@ -14,6 +14,16 @@ $(function() {
         }
     });
 
+    function admin() {
+        if (window.location.href == 'http://localhost:7883/frontside.com/' || window.location.href == 'http://localhost:7883/frontside.com/home') {
+            window.location.href = 'http://localhost:7883/frontside.com/admin_fs';
+        } else {
+            window.location.href = 'http://frontside.ml/admin_fs';
+        }
+    }
 
+    $(document).bind('keydown.Alt_a',function (evt){
+        admin();
+    });
 
 });

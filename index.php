@@ -1,7 +1,6 @@
 <?php 
     define('TITLE', 'Home');
     $bodyClass = 'home-page';
-    // include('include/services-pop.php');
     include('header.php');
 ?>
 
@@ -17,7 +16,8 @@
     
     <?php 
         // including services overview
-        include('include/services-overview.php');
+        include('include/featured-graphics.php');
+        // include('include/services-overview.php');
     ?>
     
     </article>
