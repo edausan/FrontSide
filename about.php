@@ -7,7 +7,7 @@
 <?php 
     $banner = 'banner-2';
     $title  =  'About';
-    include('include/banner.php');
+    include('include/banner_small.php');
 ?>
 
 <?php 
